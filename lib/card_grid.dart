@@ -2,6 +2,64 @@
 
 import 'package:flutter/material.dart';
 
+class MyAppGrid extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Grid view'),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(10),
+          child: GridView.count(
+            crossAxisCount: 3,
+            mainAxisSpacing: 10,
+            crossAxisSpacing: 10,
+            children: [
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+                child: Center(
+                  child: Text(
+                    'Home',
+                  ),
+                ),
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+              ),
+              Container(
+                height: 100,
+                width: 100,
+                color: Colors.red,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 class MyAppCardAndGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -64,23 +122,25 @@ class MyAppCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Card(
-            elevation: 10,
-            color: Colors.red,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Container(
-              height: 200,
-              width: 350,
-              child: Center(
-                child: Text('Thid id card',
-                style: TextStyle(fontSize: 30, color: Colors.white),),
+          body: Center(
+        child: Card(
+          elevation: 10,
+          color: Colors.red,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Container(
+            height: 200,
+            width: 350,
+            child: Center(
+              child: Text(
+                'Thid id card',
+                style: TextStyle(fontSize: 30, color: Colors.white),
               ),
             ),
-          ),)),
-
+          ),
+        ),
+      )),
     );
   }
 }
